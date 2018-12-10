@@ -20,7 +20,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "imagemin-jpeg-recompress": "^6.0.0",
-    "imagemin-pngquant": "^6.0.0"
+    "imagemin-pngquant": "^6.0.0",
+    "node-normalize-scss": "^8.0.0"
   },
   "name": "gulp4-layout",
   "version": "1.0.0",

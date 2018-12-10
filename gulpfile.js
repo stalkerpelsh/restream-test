@@ -93,7 +93,9 @@ gulp.task('css:build', function (cb) {
     gulp.src(path.src.style)
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: require('node-normalize-scss').includePaths
+        }))
         .pipe(postcss(plugins))
         .pipe(sourcemaps.write('../maps'))
         .pipe(gulp.dest(path.build.css))
@@ -175,7 +177,9 @@ gulp.task('css:prod', function (cb) {
     ];
     gulp.src(path.src.style)
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: require('node-normalize-scss').includePaths
+        }))
         .pipe(postcss(plugins))
         .pipe(gulp.dest(path.prod.css))
     cb();
