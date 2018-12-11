@@ -1,5 +1,6 @@
 .header {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+
     &__inner {
         display: flex;
         height: 56px;
@@ -8,15 +9,67 @@
         margin: 0 auto;
         padding: 0 10px;
     }
+
     &__logo {
         display: flex;
         align-items: center;
         text-decoration: none;
+
         &-title {
             color: $black;
             font-size: 24px;
             font-family: 'Righteous';
             margin-left: 10px;
+        }
+    }
+
+    &__switch {
+        display: flex;
+        margin-left: 318px;
+
+        &-variant {
+            color: $tundora;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.0104444px;
+        }
+
+        &-input {
+            display: none;
+
+            &:checked+.header__switch-label:before {
+                transform: translateX(23px);
+            }
+        }
+
+        &-toggle {
+            display: flex;
+            align-items: center;
+            margin: 2px 14px 0;
+        }
+
+        &-label {
+            position: relative;
+            display: inline-block;
+            user-select: none;
+            width: 49px;
+            height: 2.6px;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: -13px;
+                display: block;
+                width: 26px;
+                height: 26px;
+                background-color: $pelorous;
+                border-radius: 50%;
+                transition: transform 0.3s;
+            }
         }
     }
 }
