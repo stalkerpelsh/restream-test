@@ -1,0 +1,90 @@
+.menu {
+    padding-top: 28px;
+
+    &__inner {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: $black;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.0188px;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        column-count: 2;
+        column-gap: 28px;
+        column-fill: initial;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &-item {
+        padding: 14px 24px 31px;
+        background-color: $alabaster;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24),
+            0px 0px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 3px;
+        margin-bottom: 28px;
+        break-inside: avoid-column;
+
+        &__title {
+            color: $black;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.0130556px;
+            margin-bottom: 12px;
+        }
+
+        &__label {
+            display: flex;
+            flex-flow: row-reverse;
+            justify-content: flex-end;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__radio {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            &:checked~.menu-item__mark {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $green;
+                border: none;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 14px;
+                    height: 10px;
+                    background: url('../img/ok.svg') no-repeat;
+                }
+            }
+        }
+
+        &__mark {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 auto;
+            border: 2px solid #747474;
+            border-radius: 3px;
+        }
+
+        &__dishname {
+            font-size: 16px;
+            margin-left: 9px;
+            letter-spacing: 0.0161143px;
+            user-select: none;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+mixin menu-item(title, name, dish1, dish2)
+    li.menu-item
+        .menu-item__title= title
+        label.menu-item__label
+            .menu-item__dishname= dish1
+            input.menu-item__radio(type="radio" name= name)
+            span.menu-item__mark
+        label.menu-item__label
+            .menu-item__dishname= dish2
+            input.menu-item__radio(type="radio" name= name)
+            span.menu-item__mark
