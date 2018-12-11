@@ -38,7 +38,9 @@
             display: none;
 
             &:checked+.header__switch-label:before {
+                background-color: $pelorous;
                 transform: translateX(23px);
+                border: none;
             }
         }
 
@@ -66,7 +68,10 @@
                 display: block;
                 width: 26px;
                 height: 26px;
-                background-color: $pelorous;
+                background-color: #fff;
+                border: 2px solid $suva-gray;
+                box-sizing: border-box;
+
                 border-radius: 50%;
                 transition: transform 0.3s;
             }
