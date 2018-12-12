@@ -2,7 +2,8 @@ include menu-item
 
 section.menu
     .menu__inner
-        .menu__day
+        .menu__text Приходите завтра!
+        .menu__day.menu__day_visible
             .menu__title Понедельник, сегодня, 6 февраля
             ul.menu__list
                 +menu-item('Салаты', 'salad', 'Нежный', 'Винегрет овощной со свежим горошком')
@@ -13,7 +14,7 @@ section.menu
                 .menu-comment__block
                     textarea.menu-comment__textarea
                     button.menu-comment__btn Сбросить в дефолт!
-        .menu__day
+        .menu__day.menu__day_visible
             .menu__title Вторник, завтра, 7 февраля
             ul.menu__list
                 +menu-item('Салаты', 'salad2', 'Нежный', 'Винегрет овощной со свежим горошком')
