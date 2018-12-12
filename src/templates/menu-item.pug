@@ -1,11 +1,11 @@
-mixin menu-item(title, name, dish1, dish2)
-    li.menu-item
+mixin menu-item(title, name, dish1, dish2, disableClass)
+    li.menu-item(class=disableClass)
         .menu-item__title= title
         label.menu-item__label
             .menu-item__dishname= dish1
-            input.menu-item__radio(type="radio" name= name checked)
+            input.menu-item__radio(type="radio" name= name checked)&attributes(attributes)
             span.menu-item__mark
         label.menu-item__label
             .menu-item__dishname= dish2
-            input.menu-item__radio(type="radio" name= name)
+            input.menu-item__radio(type="radio" name= name)&attributes(attributes)
             span.menu-item__mark

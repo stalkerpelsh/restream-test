@@ -72,6 +72,19 @@
         border-radius: 3px;
         margin-bottom: 28px;
 
+        &_disabled {
+            .menu-item {
+                &__title {
+                    opacity: 0.2;
+                }
+
+                &__label {
+                    opacity: 0.2;
+                }
+            }
+
+        }
+
         &__title {
             color: $black;
             font-size: 20px;
