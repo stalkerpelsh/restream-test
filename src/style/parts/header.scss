@@ -16,6 +16,13 @@
         padding: 0 10px;
     }
 
+    &__item {
+        flex: 1 0;
+        @media screen and (max-width: 639px) {
+            display: none;
+        }
+    }
+
     &__logo {
         display: flex;
         align-items: center;
@@ -27,11 +34,19 @@
             font-family: 'Righteous';
             margin-left: 10px;
         }
+
+        @media screen and (max-width: 639px) {
+            display: none;
+        }
     }
 
     &__switch {
         display: flex;
-        margin-left: 318px;
+        justify-content: center;
+        @media screen and (max-width: 639px) {
+            margin: auto;
+            display: flex;
+        }
 
         &-variant {
             color: $tundora;

@@ -1,10 +1,15 @@
 .menu {
-    padding-top: 84px;
+    padding: 84px 15px 40px;
+
+    @media screen and (max-width: 530px) {
+        padding: 73px 15px 40px;
+    }
 
     &__inner {
         position: relative;
         max-width: 800px;
         margin: 0 auto;
+
     }
 
     &__text {
@@ -12,6 +17,7 @@
         display: flex;
         align-content: center;
         justify-content: center;
+        text-align: center;
         top: 0;
         left: 0;
         right: 0;
@@ -20,6 +26,14 @@
         opacity: 0;
         overflow: hidden;
         transition: opacity 320ms ease-in-out;
+
+        @media screen and (max-width: 530px) {
+            font-size: 34px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 28px;
+        }
 
         &_visible {
             opacity: 1;
@@ -33,6 +47,23 @@
         line-height: 42px;
         letter-spacing: 0.0188px;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 639px) {
+            font-size: 30px;
+            line-height: normal;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 530px) {
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
     }
 
     &__list {
@@ -42,6 +73,10 @@
         padding: 0;
         margin: 0;
         list-style: none;
+
+        @media screen and (max-width: 639px) {
+            column-count: 1;
+        }
     }
 
     &__day {
@@ -51,6 +86,10 @@
         transition: height 350ms ease-in-out,
             opacity 750ms ease-in-out;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 639px) {
+            margin-bottom: 35px;
+        }
 
         &_visible {
             height: auto;
@@ -72,6 +111,11 @@
         border-radius: 3px;
         margin-bottom: 28px;
 
+        @media screen and (max-width: 480px) {
+            padding: 17px 13px 19px;
+            margin-bottom: 15px;
+        }
+
         &_disabled {
             .menu-item {
                 &__title {
@@ -91,6 +135,10 @@
             font-weight: 500;
             letter-spacing: 0.0130556px;
             margin-bottom: 12px;
+
+            @media screen and (max-width: 480px) {
+                font-size: 18px;
+            }
         }
 
         &__label {
@@ -98,7 +146,7 @@
             flex-flow: row-reverse;
             justify-content: flex-end;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-bottom: 13px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -134,7 +182,7 @@
             border: 2px solid #747474;
             border-radius: 3px;
             transition: background-color .3s,
-            border .1s;
+                border .1s;
         }
 
         &__dishname {
@@ -142,6 +190,12 @@
             margin-left: 9px;
             letter-spacing: 0.0161143px;
             user-select: none;
+
+            @media screen and (max-width: 480px) {
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.0141px;
+            }
         }
     }
 
@@ -154,6 +208,15 @@
             border: 1px solid $dusty-gray;
             padding: 10px;
             margin-bottom: 20px;
+
+            @media screen and (max-width: 480px) {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            &:focus {
+                outline: none;
+            }
         }
 
         &__btn {
@@ -167,6 +230,14 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+
+            @media screen and (max-width: 639px) {
+                margin: 0 auto;
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
         }
     }
 }

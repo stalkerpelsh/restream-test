@@ -1,11 +1,12 @@
 header.header   
     .header__inner  
-        a.header__logo(href="/")
+        a.header__logo.header__item(href="/")
             img.header__logo-img(src="/assets/img/logo.svg", alt="logo")
             .header__logo-title obeder
-        .header__switch
+        .header__switch.header__item
             .header__switch-variant Не ем
             .header__switch-toggle
                 input#eating-toggle.header__switch-input(type="checkbox" checked onclick='toggleMenu()')
                 label.header__switch-label(for="eating-toggle")
             .header__switch-variant Ем
+        .header__item
