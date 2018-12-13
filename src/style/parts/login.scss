@@ -1,10 +1,10 @@
 .login {
     display: flex;
     justify-content: center;
-    padding-top: 55px;
+    padding: 55px 0 45px;
 
     &__inner {
-        width: 260px;
+        width: 268px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -70,6 +70,26 @@
                 transform: scale(0, 1);
                 transition: all .3s linear;
             }
+        }
+
+        &__btn {
+            display: block;
+            width: 140px;
+            line-height: 40px;
+            height: 40px;
+            color: $white;
+            font-size: 20px;
+            text-align: center;
+            background: $pelorous;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-bottom: 33px;
+        }
+        &__descr {
+            color: $gray;
+            font-size: 12px;
+            text-align: center;
         }
     }
 }
