@@ -18,7 +18,8 @@
 
     &__item {
         flex: 1 0;
-        @media screen and (max-width: 639px) {
+
+        @include respond($lg) {
             display: none;
         }
     }
@@ -35,7 +36,7 @@
             margin-left: 10px;
         }
 
-        @media screen and (max-width: 639px) {
+        @include respond($lg) {
             display: none;
         }
     }
@@ -43,7 +44,8 @@
     &__switch {
         display: flex;
         justify-content: center;
-        @media screen and (max-width: 639px) {
+
+        @include respond($lg) {
             margin: auto;
             display: flex;
         }
