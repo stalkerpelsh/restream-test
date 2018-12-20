@@ -124,7 +124,7 @@ gulp.task('js:build', function () {
     return gulp.src('./src/js/*.js')
         .pipe(rigger())
         .pipe(babel({
-            presets: ['env']
+            presets: ['@babel/env']
         }))
         .pipe(plumber({
             errorHandler: onError
@@ -201,7 +201,7 @@ gulp.task('js:prod', function () {
     return gulp.src('./src/js/*.js')
         .pipe(rigger())
         .pipe(babel({
-            presets: ['env']
+            presets: ['@babel/env']
         }))
         .pipe(plumber({
             errorHandler: onError
