@@ -56,6 +56,19 @@
             &-group {
                 position: relative;
                 margin-bottom: 19px;
+
+                &_error {
+                    .login-form__input {
+                        color: $red;
+                        border-bottom: 2px solid $red;
+                        &:focus {
+                            color: $black;
+                        }
+                    }
+                    .login-form__message {
+                        color: $red;
+                    }
+                }
             }
 
             &-underline {
@@ -72,6 +85,11 @@
             }
         }
 
+        &__message {
+            color: $gray;
+            font-size: 12px;
+        }
+
         &__btn {
             display: block;
             width: 140px;
@@ -84,8 +102,9 @@
             border-radius: 4px;
             text-decoration: none;
             cursor: pointer;
-            margin-bottom: 33px;
+            margin: 0 auto 33px;
         }
+
         &__descr {
             color: $gray;
             font-size: 12px;

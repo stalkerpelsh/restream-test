@@ -5,10 +5,10 @@ section.login
             .login-logo__title obeder
         .login-form
             .login-form__input-group
-                input#login.login-form__input(type="mail" placeholder="Электропочта") 
+                input#email.login-form__input(type="email" placeholder="Электропочта" name="email") 
                 .login-form__input-underline
             .login-form__input-group
-                input#pass.login-form__input(type="password" placeholder="Кодовое слово")
+                input#pass.login-form__input(type="password" placeholder="Кодовое слово" name="pass")
                 .login-form__input-underline
-        button.login-form__btn(onclick='auth()') Обедать!
+            #log-btn.login-form__btn Обедать!
         .login-form__descr Крайне мелкий текст поясняющий магические особенности входа или регистрации
