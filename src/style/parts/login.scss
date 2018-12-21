@@ -10,23 +10,6 @@
         align-items: center;
     }
 
-    &-logo {
-        margin-bottom: 60px;
-
-        &__img {
-            width: 160px;
-            height: 160px;
-            margin-bottom: 10px;
-        }
-
-        &__title {
-            color: $black;
-            font-size: 36px;
-            font-family: 'Righteous', cursive;
-            text-align: center;
-        }
-    }
-
     &-form {
         width: 100%;
         margin-bottom: 37px;
@@ -61,10 +44,12 @@
                     .login-form__input {
                         color: $red;
                         border-bottom: 2px solid $red;
+
                         &:focus {
                             color: $black;
                         }
                     }
+
                     .login-form__message {
                         color: $red;
                     }
@@ -110,5 +95,22 @@
             font-size: 12px;
             text-align: center;
         }
+    }
+}
+
+.logo {
+    margin-bottom: 60px;
+
+    &__img {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        color: $black;
+        font-size: 36px;
+        font-family: 'Righteous', cursive;
+        text-align: center;
     }
 }
