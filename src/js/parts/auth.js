@@ -7,8 +7,13 @@ const removeValidation = () => {
     const inputGroup = document.querySelectorAll('.login-form__input-group');
     for (let i = 0; i < errors.length; i++) {
         errors[i].remove()
+
+    }
+    for (let i = 0; i < inputGroup.length; i++) {
         inputGroup[i].classList.remove("login-form__input-group_error");
     }
+    passState = false;
+    loginState = false;
 };
 
 
@@ -49,7 +54,7 @@ const passCheck = () => {
 
 if (logBtn) {
     const inputs = document.querySelectorAll('.login-form__input');
-    for(let i = 0; i < inputs.length; i++) {
+    for (let i = 0; i < inputs.length; i++) {
         inputs[i].addEventListener('change', function () {
             removeValidation();
             loginCheck();
